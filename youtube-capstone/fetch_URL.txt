@@ -1,0 +1,98 @@
+﻿Login/SignUp
+
+client(`${backendUrl}/auth/${type}`, {
+body: data,
+});
+
+client(`${backendUrl}/auth/me`, { token });
+
+
+
+Toggle subscribe 
+client(`${process.env.REACT_APP_BE}/users/${channel.id}/togglesubscribe`);
+
+
+Add Commnet  
+client(
+`${process.env.REACT_APP_BE}/videos/${videoId}/comment`,
+{
+body: { text: comment.value },
+}
+);
+
+
+Edit Profile 
+client(`${process.env.REACT_APP_BE}/users`, {
+body: updates,
+method: "PUT",
+});
+
+Player
+client(`${process.env.REACT_APP_BE}/videos/${videoId}/view`);
+
+
+Upload Video
+const { data: video } = await client(
+`${process.env.REACT_APP_BE}/videos`,
+{ body: newVideo }
+);
+
+
+Like Video
+client(`${process.env.REACT_APP_BE}/videos/${videoId}/like`);
+
+
+Dislike Video
+client(`${process.env.REACT_APP_BE}/videos/${videoId}/dislike`);
+
+
+Get Channel
+client(`${process.env.REACT_APP_BE}/users`);
+
+
+
+Get Feed
+client(`${process.env.REACT_APP_BE}/users/feed`);
+
+
+Get History
+client(`${process.env.REACT_APP_BE}/users/history`);
+
+
+Get Liked Videos
+client(
+`${process.env.REACT_APP_BE}/users/likedVideos`
+);
+
+
+Get Profile
+client(
+`${process.env.REACT_APP_BE}/users/${userId}`
+);
+
+Get Recommandation
+client(`${process.env.REACT_APP_BE}/videos`);
+
+
+Search Result
+client(
+`${process.env.REACT_APP_BE}/users/search?searchterm=${searchTerm}`
+);
+
+client(
+`${process.env.REACT_APP_BE}/videos/search?searchterm=${searchTerm}`
+);
+
+
+Get Trending
+client(`${process.env.REACT_APP_BE}/videos`)
+
+
+Get Video
+client(
+`${process.env.REACT_APP_BE}/videos/${videoId}`
+);
+
+
+
+

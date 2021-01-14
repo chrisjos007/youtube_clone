@@ -1,0 +1,73 @@
+1. SIGN UP - ( POST http://localhost:5000/auth/signup )
+
+    REQUEST :
+
+        Request Payload : -
+            {"username":"adi999","firstname":"aditya ","lastname":"sada","email":"adi@sada.com","password":"password"}
+
+    RESPONSE :
+
+            {"success":true,"data":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQ5ZDZjM2ZkLTFkNjEtNDU1Zi04Y2IxLTZlMWZkZmZlZGExZiIsImlhdCI6MTYwOTc3MTM4NiwiZXhwIjoxNjEyMzYzMzg2fQ.3Wx7-Ejd7K5h6X5tJ00poFYn8KBtkUqKgm0ZQWVC8HM"}
+
+    ACTION :
+
+            Takes Us To Home Page
+
+
+2. UPLOAD - ( POST https://api.cloudinary.com/v1_1/capstonegroup4/video/upload )
+
+    REQUEST :
+
+        Request truncated
+
+    RESPONSE :
+    
+        {"asset_id":"566546937c2b57b2190dcf00a50da67e","public_id":"wgmh6w70dexvorngyksy","version":1609772458,"version_id":"4f93d36b58ffcd813ffc569fea89de84","signature":"0be9e9077b5d2391ba2f108b1a2bc2c07c4c6987","width":1280,"height":720,"format":"mkv","resource_type":"video","created_at":"2021-01-04T15:00:58Z","tags":[],"pages":0,"bytes":25525464,"type":"upload","etag":"2fa2b7cef3ce6f38a38496d0825408ce","placeholder":false,"url":"http://res.cloudinary.com/capstonegroup4/video/upload/v1609772458/wgmh6w70dexvorngyksy.mkv","secure_url":"https://res.cloudinary.com/capstonegroup4/video/upload/v1609772458/wgmh6w70dexvorngyksy.mkv","access_mode":"public","audio":{"codec":"opus","frequency":48000,"channels":2,"channel_layout":"stereo"},"video":{"pix_format":"yuv420p","codec":"vp9","level":-99,"profile":"Profile 0","dar":"16:9","time_base":"1/1000"},"is_audio":false,"frame_rate":25.0,"duration":142.221,"rotation":0,"original_filename":"Kedarnath - Namo Namo - Sushant Rajput - Sara Ali Khan - Amit Trivedi - Amitabh B","original_extension":"webm"}
+
+    ACTION :
+        1. Generates the button of next
+        2. After clicking next gets fields for DEtails
+        3. GEnerates Upload button
+
+
+    1. UPLOAD Button - ( POST http://localhost:5000/videos )
+
+        REQUEST :
+
+            Request Payload :
+                {"title":"Namo Namo","description":"my fav song","url":"https://res.cloudinary.com/capstonegroup4/video/upload/v1609772458/wgmh6w70dexvorngyksy.mkv","thumbnail":"https://res.cloudinary.com/capstonegroup4/video/upload/v1609772458/wgmh6w70dexvorngyksy.jpg"}
+
+
+        RESPONSE :
+
+            Response Payload:
+                {"success":true,"data":{"id":"4c51a9c6-0202-4f70-a4f2-e2f7269681ac","title":"Namo Namo","description":"my fav song","url":"https://res.cloudinary.com/capstonegroup4/video/upload/v1609772458/wgmh6w70dexvorngyksy.mkv","thumbnail":"https://res.cloudinary.com/capstonegroup4/video/upload/v1609772458/wgmh6w70dexvorngyksy.jpg","userId":"49d6c3fd-1d61-455f-8cb1-6e1fdffeda1f","updatedAt":"2021-01-04T15:08:25.140Z","createdAt":"2021-01-04T15:08:25.140Z"}}
+
+
+        ACTION :
+            takes it to "http://localhost:3000/feed/trending"
+
+3. LOGIN - ( POST http://localhost:5000/auth/login )
+
+    REQUEST :
+
+        Request Payload :-
+            {"email":"newuser1234@gmail.com","password":"newuser"}
+
+    RESPONSE :
+
+        Case 1 : Email not registered
+        Response Payload:
+            {"success":"false","message":"The email is not yet registered"}
+
+        Case 2 : Wrong password
+        Response Payload:
+            {"success":"false","message":"The password does not match"}
+
+        Case 3 : Right credentials
+        Response Payload:
+            {"success":true,"data":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIwM2QxNjMyLTRiODEtNDQ2MC1hY2I1LTUyZDFlZjk4Y2E3YSIsImlhdCI6MTYwOTc3OTg3MiwiZXhwIjoxNjEyMzcxODcyfQ.nE8kpgLu__OiszyhXw1nhdFs74_enZuBzVlE326_C3c"}
+
+
+    ACTION :
+        Login user with credentials and takes to the home page.

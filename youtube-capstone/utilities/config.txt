@@ -1,0 +1,37 @@
+1. connect to DataBase with psql
+	psql -h localhost -d random -U random
+
+Jan-4
+Debugging source project
+[changed environment variable names in env,
+setup cloudinary with unsigned custom preset as youtubeclone]
+
+Jan-5
+created models and relations
+[custom user model, onetomany relations,
+matched db schema diagrams with source]
+
+jan-6
+JWT authentication and admin
+[created custom admin interface with dropdown filter and search fields,
+
+custom JWT token authentication described below:
+(generated in utils.py file,
+authentication in authentication.py file,
+added the setting in settings.py),
+
+explored JWT token authentication]
+
+Jan-8
+API for user details, feed, likedVideos and custom serializers
+
+Jan-09
+API for toggling: [like, dislike and subscriber]
+API for video details, user update
+Custom serializers
+
+Jan-10
+API view for search
+[search by username and search by video title],
+API for view, Comment
+custom serializers
