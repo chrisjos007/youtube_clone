@@ -1,4 +1,4 @@
-# Youtube Clone Frontend
+# Youtube Clone
 
 ## Features
 
@@ -16,45 +16,3 @@
 ## Running locally
 
 docker-compose up
-
-## Watch the Demo
-
-[![Video](screenshots/video.png)](https://youtu.be/wHLurtOnmyM "Youtube Clone Demo")
-
-## UI
-
-### Home
-
-![Home](screenshots/home.png)
-
-### Trending
-
-![Trending](screenshots/trending.png)
-
-### Watch
-
-![Watch](screenshots/video.png)
-
-### Suggestions
-
-![Suggestions](screenshots/suggestions.png)
-
-### Channel
-
-![Trending](screenshots/profile.png)
-
-### Edit Profile
-
-![Edit Profile](screenshots/edit_profile.png)
-
-![Trending](screenshots/profile_channels.png)
-
-### Library
-
-![Library](screenshots/library.png)
-
-### Search
-
-![Search](screenshots/search_results.png)
-
-
