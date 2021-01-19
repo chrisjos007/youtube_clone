@@ -63,13 +63,3 @@ Then run <code>npm i</code> and <code>npm start</code> to see the youtube clone 
 ### Search
 
 ![Search](screenshots/search_results.png)
-
-
-1. Twitter
-
-   - [Frontend](https://github.com/manikandanraji/twitter-clone-frontend)
-   - [Backend](https://github.com/manikandanraji/twitter-clone-frontend)
-
-2. Instagram
-   - [Frontend](https://github.com/manikandanraji/instaclone-frontend)
-   - [Backend](https://github.com/manikandanraji/instaclone-backend)
